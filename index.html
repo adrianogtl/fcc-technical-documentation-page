@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoLang</title>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto+Serif:opsz@8..144&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <button id="darkmode_btn">
+      <span class="material-symbols-outlined">
+        dark_mode
+      </span>
+    </button>
+    <header>GoLang Documentation</header>
+    <a href="#comments" class="nav-link">Comments</a>
+    <a href="#variables" class="nav-link">Variables</a>
+    <a href="#data-types" class="nav-link">Data Types</a>
+    <a href="#strings" class="nav-link">Strings</a>
+    <a href="#operators" class="nav-link">Operators</a>
+    <a href="#statements" class="nav-link">Statements</a>
+    <a href="#functions" class="nav-link">Functions</a>
+    <a href="#reference" class="nav-link">Reference</a>
+  </nav>
+  <main id="main-doc">
+    <!-- COMMENTS -->
+    <section id="comments" class="main-section">
+      <header>Comments</header>
+      <p>Comments are useful for documentation in a Go file and are ignored by the compiler. There are two types of comments:</p>
+      <ul>
+        <li>A single-lined comment is preceded by a double forward slash, <code>//</code>, and ends at the end of the line.</li>
+        <li>A multi-lined comment begins with <code>/*</code> followed by one or more lines of comments and ends with <code>*/</code></li>
+      </ul>
+      <pre>
+        // one line comment
+        /*
+        this comment
+        is on multiple lines
+        and ends here
+        */
+      </pre>
+    </section>
+    <!-- VARIABLES -->
+    <section id="variables" class="main-section">
+      <header>Variables</header>
+      <p>A Go variable has a name attached to a value but unlike a Go constant, a variable's value can be changed after it has
+      been defined. There are four ways to declare and assign a Go variable:</p>
+      <p>Use the <code>var</code> keyword followed by a name and its data type. This variable can be assigned later in the program. For
+      example:</p>
+      <pre>
+        var fruit string
+        fruit = "apple"
+      </pre>
+      <p>Use the <code>var</code> keyword followed by a name, data type, <code>=</code> and value.</p>
+      <pre>
+        var fruit string = "apple"
+      </pre>
+      <p>Use the <code>var</code> keyword, followed by a name, <code>=</code> and value. Ignore the data type and let the compiler infer its type.</p>
+      <pre>
+        var fruit = "apple"
+      </pre>
+      <p>Skip the <code>var</code> keyword, define a name followed by <code>:=</code> and value and let the compiler infer its type.</p>
+      <pre>
+        <code>
+          fruit := "apple"
+        </code>
+      </pre>
+    </section>
+    <!-- DATA TYPES -->
+    <section id="data-types" class="main-section">
+      <header>Data types</header>
+      <p>In Go, values have a data type. The data type determines what type of information is being stored and how much space is
+      needed to store it. Go has basic data types such as:</p>
+      <ul>
+        <li>string</li>
+        <li>bool</li>
+        <li>numeric types</li>
+      </ul>
+    </section>
+    <!-- STRINGS -->
+    <section id="strings" class="main-section">
+      <header>Strings</header>
+      <p>A Go <code>string</code> is a data type that stores text or a sequence of characters in any length in double-quoted form. To
+      concatenate two strings, use the <code>+</code> operator.</p>
+      <pre>
+        <code>
+          var firstName string = "Abe"
+          var lastName string = "Lincoln"
+          
+          // prints "Abe Lincoln"
+          fmt.Println(firstName + " " + lastName)
+        </code>
+      </pre>
+    </section>
+    <!-- OPERATORS -->
+    <section id="operators" class="main-section">
+      <header>Operators</header>
+      <h2>Comparison Operators</h2>
+      <p>Go supports the standard comparison operators that compare two values and return a boolean. These include:</p>
+      <ul>
+        <li><code>==</code> equivalence operator</li>
+        <li><code>!=</code> not equal</li>
+        <li><code>&lt</code> less than</li>
+        <li><code>&gt</code> greater than</li>
+        <li><code>&lt=</code> less than or equal</li>
+        <li><code>&gt=</code> greater than or equal</li>
+      </ul>
+      <pre>
+        <code>
+          same := 3 == 3
+          // evaluates to true
+          notsame := "ABC" != "abc"
+          // evaluates to true
+          lessthan := 5 <= -5 // evaluates to false
+        </code>
+      </pre>
+      <h2>Logical Operators</h2>
+      <p>In addition to comparison operators, Go also supports logical operators which evaluate boolean values and return a
+      boolean value. For example:</p>
+      <ul>
+        <li><code>&&</code> is the AND operator that returns <code>true</code> if all the booleans are <code>true</code></li>
+        <li><code>||</code> is the OR operator that returns <code>true</code> if one of the booleans is <code>true</code></li>
+        <li><code>!</code> is the NOT operator that returns the opposite of a boolean value</li>
+      </ul>
+      <pre>
+        <code>
+          answer := true && false
+          // returns false
+          answer = true || false
+          // returns true
+          answer = !false
+          // returns true
+        </code>
+      </pre>
+    </section>
+    <!-- STATEMENTS -->
+    <section id="statements" class="main-section">
+      <header>Statements</header>
+      <h2>If Statement</h2>
+      <p>A Go <code>if</code> statement evaluates a condition and executes a statement block enclosed in curly braces <code>{..}</code> if the evaluation
+      returns <code>true</code>. The condition may be optionally enclosed inside a pair of parentheses <code>(...)</code>.</p>
+      <pre>
+        <code>
+          if (healthy) {
+          fmt.Println("Work.")
+          }
+          if sick {
+          fmt.Println("Stay home.")
+          }
+        </code>
+      </pre>
+      <h2>Else Statement</h2>
+      <p>A Go <code>else</code> statement can succeed an <code>if</code> or <code>if else-if</code> statement block and its code executed if the conditions in the
+      preceding <code>if</code> or <code>if else-if</code> statements evaluate to <code>false</code>.</p>
+      <pre>
+        <code>
+          sick := false
+          if sick {
+          fmt.Println("Call the doctor.")
+          } else {
+          fmt.Println("Enjoy your day.")
+          }
+        </code>
+      </pre>
+      <h2>Else If Statement</h2>
+      <p>The Go <code>else if</code> statement provides an additional condition to evaluate besides the first <code>if</code> conditional. It can only
+      appear after the <code>if</code> statement and before an <code>else</code> statement if it exists. For example:</p>
+      <pre>
+        <code>
+          if (temperature &lt 60) { 
+            fmt.Println("Put on a jacket.") 
+          } else if (temperature>= 60 && temperature &lt 75) {
+              fmt.Println("Put on a light sweater.") 
+            } else { 
+              fmt.Println("Wear summer clothes.") 
+          }
+        </code>
+      </pre>
+      <h2>Switch Statement</h2>
+      <p>The Go <code>switch</code> statement can be used as an alternative to a set of <code>if</code> followed by <code>else if</code> statements. The <code>switch</code>
+      statement compares the expression inside a condition with a set of values encapsulated in <code>case</code>s. The code inside a
+      matched <code>case</code> value is executed and the switch block terminates. A <code>default</code> case without a value can be appended to the
+      last <code>case</code> and its code executed if no prior match is found.</p>
+      <pre>
+        <code>
+          day := "Tuesday"
+          switch day {
+          case "Monday":
+          fmt.Println("Monday is magnificent.")
+          case "Tuesday":
+          fmt.Println("Tuesday is terrific.")
+          case "Wednesday":
+          fmt.Println("Wednesday is wacky.")
+          default:
+          fmt.Println("We survived.")
+          }
+
+        </code>
+      </pre>
+    </section>
+    <!-- FUNCTIONS -->
+    <section id="functions" class="main-section">
+      <header>Functions</header>
+      <p>When a Go function parameter is passed by value, it means only a copy of the value is accessed and manipulated inside
+      the function. The original value of the variable that is passed as an argument to the function remains intact.</p>
+      <pre>
+        <code>
+          func makeMeOlder(age int) {
+          age += 5
+          }
+          
+          func main() {
+          myAge := 10
+          makeMeOlder(myAge)
+          fmt.Println(myAge)
+          // myAge is still 10
+          }
+        </code>
+      </pre>
+    </section>
+    <!-- REFERENCE -->
+    <section id="reference" class="main-section">
+      <header>Reference</header>
+      <p>All the documentation in this page is from  <a href="https://www.codecademy.com/learn/learn-go/modules/learn-go-introduction/cheatsheet" target="_blank">Code Academy</a>.</p>
+    </section>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const darkmodeBtn = document.getElementsByClassName('material-symbols-outlined')[0]
+    const whiteEl = ["document.getElementsByName('pre')", "document.getElementsByName('code')", "document.getElementsByTagName('body')[0]"]
+
+    darkmodeBtn.addEventListener('click', function () {
+        changeTheme();
+      });
+
+      function changeTheme() {
+        darkmodeBtn.innerHTML = 'light_mode'
+        whiteEl.style.cssText = `
+        color: #fff;
+        background-color: #000;
+        `
+      }
+  })
+  </script>
+</body>
+</html>
