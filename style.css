@@ -1,10 +1,4 @@
 /* Global */
-:root {
-  --linkColor: #0c1c3a;
-  --txtColor: #000;
-  --bgColor: #fff;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,25 +10,37 @@ html {
 }
 
 a {
-  text-decoration: none;
-  color: var(--linkColor);
+  color: black;
+  background-color: white;
 }
 
-#darkmode_btn {
+/* Color Mode */
+.light-mode {
+  color: #000;
+  background-color: #fff;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #000;
+}
+
+#darkmode-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   padding: 10px;
   border: none;
   border-radius: 50%;
-  background-color: var(#e1e4ea);
+  cursor: pointer;
+  background-color: black;
 }
 
 .material-symbols-outlined {
   transform: scale(1.5);
-  color: var(black);
+  color: gray;
   font-variation-settings:
-    'FILL' 0,
+    'FILL' 1,
     'wght' 400,
     'GRAD' 0,
     'opsz' 25
@@ -43,8 +49,8 @@ a {
 /* Nav */
 #navbar {
   width: 100%;
+  min-width: 300px;
   max-height: 500px;
-  background-color: var(--bgColor);
   padding: 0px 10px;
 }
 
@@ -53,6 +59,7 @@ a {
   display: block;
   padding: 15px;
   font-size: 1.3rem;
+  text-decoration: none;
   border-bottom: 1px solid black;
 }
 
@@ -95,21 +102,24 @@ li {
 }
 
 p {
+  line-height: 1.4rem;
   padding: 10px 0;
 }
 
 /* Code */
+
 pre,
 code {
   font-family: 'Roboto Mono', monospace;
-  background-color: var(--bgColor);
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 pre {
   white-space: pre-line;
-  padding: 5px 0 5px 30px;
-  border-radius: 5px;
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 @media (min-width: 1200px) {
@@ -136,6 +146,7 @@ pre {
   }
 
   .nav-link {
+    color: black;
     font-size: 1.5rem;
   }
 
