@@ -10,11 +10,11 @@
 <h3 align="center">Go Docs | Technical Documentation Page</h3>
 
   <p align="center">
-    A basic cheatsheet for Go Language
+    A simple documentation for the Go Progamming Language 
     <br />
     <br />
     <a href="https://adrianogtl.github.io/freecodecamp-technical-documentation-page/">View Demo</a>
-    ·
+    🔗
     <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
   </p>
 </div>
@@ -69,7 +69,7 @@ Adriano Garcia - [adrianogtlopes@gmail.com](mailto:adrianogtlopes@gmail.com)
 * Icons and fonts from [Google ][google-url]
 * GoLang Mascot from [WikiMedia][wikimedia-url]
 
-<p align="center"><a href="#readme-top">back to top ⬆️</a></p>
+<p align="center"><a href="#readme-top">back to top 🔝</a></p>
 
 
 
