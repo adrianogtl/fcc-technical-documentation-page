@@ -69,7 +69,7 @@ Adriano Garcia - [adrianogtlopes@gmail.com](mailto:adrianogtlopes@gmail.com)
 * Icons and fonts from [Google ][google-url]
 * GoLang Mascot from [WikiMedia][wikimedia-url]
 
-<p align="center"><a href="#readme-top">back to top 🔝</a></p>
+<p align="right"><a href="#readme-top">back to top 🔝</a></p>
 
 
 
