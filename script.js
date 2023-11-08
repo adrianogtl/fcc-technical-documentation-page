@@ -13,13 +13,14 @@ darkmodeBtn.addEventListener('click', () => {
 })
 
 function changeToDark(){
+  // Body and Nav section
   body.classList.remove('light-mode')
   body.classList.add('dark-mode')
-
   nav.style.color = 'white'
   nav.style.backgroundColor = 'black'
   nav.style.borderColor = 'white'
 
+  // Nav Links
   for (let i = 0, len = link.length; i < len; i++) {
     link[i].style.color = 'white'
     link[i].style.backgroundColor = 'black'
@@ -34,18 +35,18 @@ function changeToDark(){
 }
 
 function changeToLight(){
+  // Body and Nav section
   body.classList.remove('dark-mode')
   body.classList.add('light-mode')
-
-
   nav.style.color = 'black'
   nav.style.backgroundColor = 'white'
   nav.style.borderColor = 'black'
   
-   for (let i = 0, len = link.length; i < len; i++) {
+  // Nav Links
+  for (let i = 0, len = link.length; i < len; i++) {
     link[i].style.color = 'black'
     link[i].style.backgroundColor = 'white'
-    link[i].style.borderColor = 'white'
+    link[i].style.borderColor = 'black'
   }
   
   // Dark mode button

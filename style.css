@@ -52,6 +52,7 @@ a {
   min-width: 300px;
   max-height: 500px;
   padding: 0px 10px;
+  margin-bottom: 3rem;
 }
 
 .nav-link {
@@ -143,10 +144,10 @@ pre {
     position: sticky;
     top: 0;
     border-right: 2px solid black;
+    margin-bottom: 2rem;
   }
 
   .nav-link {
-    color: black;
     font-size: 1.5rem;
   }
 
@@ -157,5 +158,4 @@ pre {
   pre {
     margin-left: 2rem;
   }
-
 }
