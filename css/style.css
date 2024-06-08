@@ -3,7 +3,6 @@
   --font-mono: "Ubuntu Mono", monospace;
   --code-color: #4d4e53;
   --code-color-bg: #f5f5f5;
-  --link-color: #000;
   --font-size: 1.2rem;
 }
 
@@ -59,7 +58,7 @@ nav {
   }
 
   a {
-    color: var(--link-color);
+    color: #000;
     position: relative;
     text-decoration: none;
   }
@@ -71,7 +70,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--link-color);
+    background-color: #000;
     transition: width 0.3s ease-in-out;
   }
 
@@ -132,6 +131,10 @@ footer {
   font-size: 0.9rem;
   margin-left: 1rem;
   margin-right: 1rem;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 768px) {
