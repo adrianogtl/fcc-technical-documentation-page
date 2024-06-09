@@ -3,6 +3,7 @@
   --font-mono: "Ubuntu Mono", monospace;
   --code-color: #4d4e53;
   --code-color-bg: #f5f5f5;
+  --js-logo-color: #ffd600;
   --font-size: 1.2rem;
 }
 
@@ -29,10 +30,10 @@ section {
 
 nav {
   position: fixed;
-  margin-left: 2rem;
-  height: 100%;
+  padding-left: 2rem;
+  height: fit-content;
 
-  h1:before {
+  h1::before {
     display: inline-block;
     content: "";
     width: 50px;
@@ -40,6 +41,10 @@ nav {
     background-image: url(../assets/icons8-js.svg);
     background-size: cover;
     margin-right: 10px;
+  }
+
+  .nav-hover::before {
+    background-image: url(../assets/icons8-js.gif);
   }
 
   h1 {
@@ -70,7 +75,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #000;
+    background-color: var(--js-logo-color);
     transition: width 0.3s ease-in-out;
   }
 
