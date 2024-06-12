@@ -19,7 +19,6 @@
   </p>
 </div>
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -36,55 +35,57 @@
   </ol>
 </details>
 
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 ![Screenshot][preview]
-* **Objective**: Build an app that is functionally similar to https://technical-documentation-page.freecodecamp.rocks/
 
-* 3rd certification project in freeCodeCamp's Responsive Web Design curriculum
+- **Objective**: Build an app that is functionally similar to https://technical-documentation-page.freecodecamp.rocks/
 
+- 3rd certification project in freeCodeCamp's Responsive Web Design curriculum
 
 ### Built With
 
-* [GitHub Pages][github-pages]
-
+- [GitHub Pages][github-pages]
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See [LICENSE][license-url] for more information.
 
-
 <!-- CONTACT -->
+
 ## Contact
 
 Adriano Garcia - [adrianogtlopes@gmail.com](mailto:adrianogtlopes@gmail.com)
 
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* Icons and fonts from [Google ][google-url]
-* GoLang Mascot from [WikiMedia][wikimedia-url]
+- Icons and fonts from [Google ][google-url]
+- GoLang Mascot from [WikiMedia][wikimedia-url]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 <!-- ABOUT -->
+
 [preview]: screencast.gif
 
 <!-- BUILT WITH -->
+
 [github-pages]: https://pages.github.com/
 
 <!-- LICENSE -->
+
 [license-url]: https://github.com/adrianogtl/freecodecamp-technical-documentation-page/blob/main/LICENSE
 
 <!-- ACKNOWLEDGMENTS -->
+
 [google-url]: https://fonts.google.com/
 [wikimedia-url]: https://commons.wikimedia.org/wiki/Main_Page
