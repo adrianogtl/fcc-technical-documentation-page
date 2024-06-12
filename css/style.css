@@ -145,7 +145,8 @@ pre {
   font-family: var(--font-mono);
   color: var(--dark-gray-color);
   background-color: var(--light-gray-color);
-  overflow-x: scroll;
+  white-space: pre-wrap;
+  overflow-x: hidden;
 }
 
 code {
@@ -156,6 +157,24 @@ pre {
   display: block;
   padding: 1rem;
   white-space: pre-line;
+}
+
+.container-code {
+  position: relative;
+}
+
+.clipboard-btn {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border: none;
+}
+
+.clipboard-btn:hover {
+  cursor: pointer;
 }
 
 .external-link:after {

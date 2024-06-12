@@ -178,12 +178,14 @@
               To get started with writing JavaScript, open the Scratchpad and
               write your first "Hello world" JavaScript code:
             </p>
-            <pre class="code-exemple">
-              function greetMe(yourName) {
-              &nbsp;alert("Hello " + yourName);
-              }
-              greetMe("World");
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                function greetMe(yourName) {
+                &nbsp;alert("Hello " + yourName);
+                }
+                greetMe("World");
+              </pre>
+            </div>
             <p>
               Select the code in the pad and hit Ctrl+R to watch it unfold in
               your browser!
@@ -255,23 +257,26 @@
               the function (or global context) within which x is declared, not
               the block, which in this case is an if statement.
             </p>
-            <pre class="code-exemple">
-              if (true) {
-              &nbsp;var x = 5; 
-              } 
-              console.log(x); // 5
-              </pre
-            >
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (true) {
+                &nbsp;var x = 5; 
+                } 
+                console.log(x); // 5
+              </pre>
+            </div>
             <p>
               This behavior changes, when using the let declaration introduced
               in ECMAScript 2015.
             </p>
-            <pre class="code-exemple">
-              if (true) {
-                 let y = 5;
-              }
-              console.log(y); // ReferenceError: y is not defined
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (true) {
+                   let y = 5;
+                }
+                console.log(y); // ReferenceError: y is not defined
+              </pre>
+            </div>
           </article>
         </section>
         <section id="global-variables" class="section">
@@ -316,26 +321,30 @@
               You cannot declare a constant with the same name as a function or
               variable in the same scope. For example:
             </p>
-            <pre class="code-exemple">
-              // THIS WILL CAUSE AN ERROR 
-              function f() {}; 
-              &nbsp;const f = 5; // THIS WILL CAUSE AN ERROR ALSO 
-              function f() { 
-              &nbsp;const g = 5; 
-              &nbsp;var g; 
-              &nbsp;//statements 
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                // THIS WILL CAUSE AN ERROR 
+                function f() {}; 
+                &nbsp;const f = 5; // THIS WILL CAUSE AN ERROR ALSO 
+                function f() { 
+                &nbsp;const g = 5; 
+                &nbsp;var g; 
+                &nbsp;//statements 
+                }
+              </pre>
+            </div>
             <p>
               However, object attributes are not protected, so the following
               statement is executed without problems.
             </p>
-            <pre class="code-exemple">
-              const MY_OBJECT = {
-              &nbsp;"key": "value"
-              }; 
-              MY_OBJECT.key = "otherValue";
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                const MY_OBJECT = {
+                &nbsp;"key": "value"
+                }; 
+                MY_OBJECT.key = "otherValue";
+              </pre>
+            </div>
           </article>
         </section>
         <section id="data-types" class="section">
@@ -380,13 +389,15 @@
               is true. Use the optional else clause to execute a statement if
               the condition is false. An if statement looks as follows:
             </p>
-            <pre class="code-exemple">
-              if (condition) {
-              &nbsp;statement_1; 
-              } else { 
-              &nbsp;statement_2; 
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (condition) {
+                &nbsp;statement_1; 
+                } else { 
+                &nbsp;statement_2; 
+                }
+              </pre>
+            </div>
             <p>
               condition can be any expression that evaluates to true or false.
               See Boolean for an explanation of what evaluates to true and
@@ -398,17 +409,19 @@
               You may also compound the statements using else if to have
               multiple conditions tested in sequence, as follows:
             </p>
-            <pre class="code-exemple">
-              if (condition_1) {
-              &nbsp;statement_1; 
-              } else if (condition_2) {
-              &nbsp;statement_2; 
-              } else if (condition_n) { 
-              &nbsp;statement_n; 
-              } else {
-              &nbsp;statement_last; 
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (condition_1) {
+                &nbsp;statement_1; 
+                } else if (condition_2) {
+                &nbsp;statement_2; 
+                } else if (condition_n) { 
+                &nbsp;statement_n; 
+                } else {
+                &nbsp;statement_last; 
+                }
+              </pre>
+            </div>
             <p>
               In the case of multiple conditions only the first logical
               condition which evaluates to true will be executed. To execute
@@ -416,37 +429,42 @@
               <code>{ ... }</code> . In general, it's good practice to always
               use block statements, especially when nesting if statements:
             </p>
-            <pre class="code-exemple">
-              if (condition) {
-              &nbsp;statement_1_runs_if_condition_is_true;
-              &nbsp;statement_2_runs_if_condition_is_true;
-              }&nbsp;else {
-              &nbsp;statement_3_runs_if_condition_is_false;
-              &nbsp;statement_4_runs_if_condition_is_false; 
-              }
-              </pre
-            >
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (condition) {
+                &nbsp;statement_1_runs_if_condition_is_true;
+                &nbsp;statement_2_runs_if_condition_is_true;
+                }&nbsp;else {
+                &nbsp;statement_3_runs_if_condition_is_false;
+                &nbsp;statement_4_runs_if_condition_is_false; 
+                }
+              </pre>
+            </div>
             <p>
               It is advisable to not use simple assignments in a conditional
               expression, because the assignment can be confused with equality
               when glancing over the code. For example, do not use the following
               code:
             </p>
-            <pre class="code-exemple">
-              if (x = y) { 
-              &nbsp;/* statements here */
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                if (x = y) { 
+                &nbsp;/* statements here */
+                }
+              </pre>
+            </div>
             <p>
               If you need to use an assignment in a conditional expression, a
               common practice is to put additional parentheses around the
               assignment. For example:
             </p>
-            <pre class="code-exemple">
-              if ((x = y)) {
-              &nbsp;/* statements here */ 
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                if ((x = y)) {
+                &nbsp;/* statements here */ 
+                }
+              </pre>
+            </div>
           </article>
         </section>
         <section id="while-statement" class="section">
@@ -475,14 +493,16 @@
             <p>
               The following while loop iterates as long as n is less than three:
             </p>
-            <pre class="code-exemple">
-              var n = 0;
-              var x = 0;
-              while (n < 3) {
-              &nbsp;n++;
-              &nbsp;x += n;
-            }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                var n = 0;
+                var x = 0;
+                while (n < 3) {
+                &nbsp;n++;
+                &nbsp;x += n;
+              }
+              </pre>
+            </div>
             <p>
               With each iteration, the loop increments n and adds that value to
               <code>x</code>. Therefore, <code>x</code> and <code>n</code> take
@@ -527,11 +547,13 @@
               For example, the following code defines a simple function named
               square:
             </p>
-            <pre class="code-exemple">
-              function square(number) { 
-              &nbsp;return number * number;
-              }
-            </pre>
+            <div class="container-code">
+              <pre class="code-exemple">
+                function square(number) { 
+                &nbsp;return number * number;
+                }
+              </pre>
+            </div>
             <p>
               The function square takes one argument, called number. The
               function consists of one statement that says to return the
