@@ -28,10 +28,10 @@ function addClipboardEvent(clipboardBtn, preTagContent) {
   clipboardBtn.onclick = () => {
     navigator.clipboard.writeText(preTagContent);
     set;
-    clipboardBtn.innerText = "Copied!";
     setTimeout(() => {
-      clipboardBtn.innerText = "Copy";
+      clipboardBtn.innerText = "Copied!";
     }, 3000);
+    clipboardBtn.innerText = "Copy";
   };
 }
 
