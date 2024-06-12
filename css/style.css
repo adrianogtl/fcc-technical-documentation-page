@@ -65,6 +65,7 @@ nav {
   }
 
   a {
+    padding: 0.5rem;
     color: unset;
     position: relative;
     text-decoration: none;
@@ -94,19 +95,22 @@ main {
 }
 
 .scroll-to-top-container {
-  position: unset;
+  position: absolute;
   right: 5rem;
 }
 
 .scroll-to-top-btn {
-  display: block;
-  position: absolute;
-  right: 2rem;
-  bottom: 3rem;
+  display: none;
+  position: fixed;
+  right: unset;
+  bottom: 0;
+  transform: translateY(-3rem);
   padding: 0.8rem;
   border: none;
   color: var(--dark-gray-color);
-  background-color: var(--js-yellow-color);
+  background-color: var(--light-gray-color);
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.233);
   box-shadow: 1px 1px 2px 2px solid rgba(0, 0, 0, 0.212);
   transition: color 0.3s;
 }
@@ -167,7 +171,7 @@ pre {
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   font-family: var(--font-sans);
   font-size: 1rem;
   border: none;

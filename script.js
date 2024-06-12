@@ -10,13 +10,6 @@ function animateLogo() {
   };
 }
 
-function fixBackToTopBtn(scrollToTopBtn, scrollToTopContainer) {
-  scrollToTopContainer.style.position = "absolute";
-  scrollToTopBtn.style.display = "none";
-  scrollToTopBtn.style.position = "fixed";
-  scrollToTopBtn.style.right = "unset";
-}
-
 function addClipboardBtns() {
   const containerCodeArr = Array.from(
     document.querySelectorAll(".container-code")
@@ -26,7 +19,7 @@ function addClipboardBtns() {
     containerCode.innerHTML += `<button class="clipboard-btn" title="Copy to clipboard">Copy</button>`;
 
     const clipboardBtn = containerCode.children[1];
-    const preTagContent = containerCode.children[0].textContent;
+    const preTagContent = containerCode.children[0].innerText;
     addClipboardEvent(clipboardBtn, preTagContent);
   });
 }
@@ -34,6 +27,10 @@ function addClipboardBtns() {
 function addClipboardEvent(clipboardBtn, preTagContent) {
   clipboardBtn.onclick = () => {
     navigator.clipboard.writeText(preTagContent);
+    setInterval(() => {
+      clipboardBtn.innerText = "Copied!";
+    }, 3000);
+    clipboardBtn.innerText = "Copy";
   };
 }
 
@@ -55,18 +52,19 @@ function addScrollEvents(scrollToTopBtn) {
 }
 
 function main() {
-  const deviceHasTouchScreen = navigator.maxTouchPoints > 0;
   const scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
   const scrollToTopContainer = document.querySelector(
     ".scroll-to-top-container"
   );
 
   addScrollEvents(scrollToTopBtn);
-  if (deviceHasTouchScreen) {
-    fixBackToTopBtn(scrollToTopBtn, scrollToTopContainer);
-  } else {
+  addClipboardBtns();
+
+  const isMobileOrTouch =
+    /Android|iPhone|Tablet|iPhone/i.test(navigator.userAgent) ||
+    navigator.maxTouchPoints > 0;
+  if (!isMobileOrTouch) {
     animateLogo();
-    addClipboardBtns();
   }
 }
 main();
