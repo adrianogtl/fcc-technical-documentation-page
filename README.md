@@ -7,10 +7,10 @@
     <img src="assets/github/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Go Docs | Technical Documentation Page</h3>
+<h3 align="center">JS Docs | Technical Documentation Page</h3>
 
   <p align="center">
-    A simple documentation for the Go Progamming Language 
+    A simple documentation for the JavaScript Progamming Language 
     <br />
     <br />
     <a href="https://adrianogtl.github.io/freecodecamp-technical-documentation-page/">View Demo</a>
