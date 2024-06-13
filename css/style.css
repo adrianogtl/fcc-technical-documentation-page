@@ -16,6 +16,10 @@
 .dark-mode {
   color: var(--white-color);
   background-color: var(--black-color);
+
+  code {
+    color: var(--light-gray-color);
+  }
 }
 
 body {
@@ -62,6 +66,7 @@ nav {
   .toggle-theme-btn {
     width: 50px;
     height: 50px;
+    margin-right: 1rem;
     background: unset;
     border: none;
     font-family: "Material Symbols Rounded";
@@ -138,16 +143,18 @@ main {
   position: fixed;
   right: unset;
   bottom: 0;
-  transform: translateY(-3rem);
+  width: 50px;
+  height: 50px;
   padding: 0.8rem;
   border: none;
-  color: var(--dark-gray-color);
-  background-color: var(--light-gray-color);
+  color: var(--black-color);
+  background-color: var(--js-yellow-color);
+  transform: translateY(-3rem);
   z-index: 10;
   font-size: 1.5rem;
   font-family: "Material Symbols Rounded";
-  border: 1px solid rgba(0, 0, 0, 0.233);
-  box-shadow: 1px 1px 2px 2px solid rgba(0, 0, 0, 0.212);
+  border: none;
+  box-shadow: 1px 1px 2px 2px solid rgba(0, 0, 0, 0.312);
   transition: color 0.3s;
 }
 
@@ -157,7 +164,6 @@ main {
 
 .scroll-to-top-btn:hover {
   cursor: pointer;
-  color: var(--black-color);
 }
 
 article {
@@ -177,7 +183,7 @@ strong {
   font-weight: bold;
 }
 
-code,
+/* code, */
 pre {
   font-size: 1.1rem;
   font-family: var(--font-mono);
@@ -188,6 +194,7 @@ pre {
 }
 
 code {
+  color: var(--dark-gray-color);
   padding: 0.2rem;
 }
 
@@ -238,8 +245,16 @@ footer {
     grid-template-rows: 100% 100%;
   }
 
+  .title-container {
+    justify-content: space-between;
+  }
+
   nav {
     position: relative;
+
+    a:hover::after {
+      width: 0%;
+    }
   }
 
   footer {
