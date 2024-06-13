@@ -1,9 +1,8 @@
 <a name="readme-top"></a>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<a href="https://adrianogtl.github.io/freecodecamp-technical-documentation-page/">
+<a href="https://adrianogtl.github.io/fcc-technical-documentation-page/">
     <img src="assets/github/icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -13,7 +12,7 @@
     A simple documentation for the JavaScript Progamming Language 
     <br />
     <br />
-    <a href="https://adrianogtl.github.io/freecodecamp-technical-documentation-page/">View Demo</a>
+    <a href="https://adrianogtl.github.io/fcc-technical-documentation-page/">View Demo</a>
     ·
     <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
   </p>
