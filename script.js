@@ -34,7 +34,8 @@ function addClipboardEvent(clipboardBtn, preTagContent) {
   };
 }
 
-function addScrollEvents(scrollToTopBtn) {
+function setScrollEvents() {
+  const scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
   scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
@@ -51,14 +52,42 @@ function addScrollEvents(scrollToTopBtn) {
   });
 }
 
-function main() {
-  const scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
-  const scrollToTopContainer = document.querySelector(
-    ".scroll-to-top-container"
-  );
+function addToggleThemeEvent() {
+  const toggleThemeBtn = document.querySelector("#toggle-theme-btn");
+  let darkMode = localStorage.getItem("darkMode");
 
-  addScrollEvents(scrollToTopBtn);
+  const enableDarkMode = () => {
+    document.body.classList.add("dark-mode");
+    toggleThemeBtn.classList.add("light-mode-icon");
+    localStorage.setItem("darkMode", "enabled");
+  };
+  const disableDarkMode = () => {
+    document.body.classList.remove("dark-mode");
+    toggleThemeBtn.classList.remove("light-mode-icon");
+    toggleThemeBtn.style.content = "dark_mode";
+    localStorage.setItem("darkMode", null);
+  };
+
+  // Check local storage when page is loaded
+  if (darkMode === "enabled") {
+    enableDarkMode();
+  }
+
+  toggleThemeBtn.addEventListener("click", () => {
+    // Update local storage variable before
+    darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
+}
+
+function main() {
+  setScrollEvents();
   addClipboardBtns();
+  addToggleThemeEvent();
 
   const isMobileOrTouch =
     /Android|iPhone|Tablet|iPhone/i.test(navigator.userAgent) ||

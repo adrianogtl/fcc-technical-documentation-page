@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
     <title>JS Docs</title>
-    <!-- normalize.css -->
-    <link rel="stylesheet" href="css/normalize.css" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Google Fonts -->
@@ -27,7 +28,15 @@
   <body>
     <section>
       <nav>
-        <h1 id="doc-title">Docs</h1>
+        <div class="title-container">
+          <h1 id="doc-title">Docs</h1>
+          <button
+            class="toggle-theme-btn"
+            id="toggle-theme-btn"
+            alt="Toggle theme"
+            title="Toggle theme"
+          ></button>
+        </div>
         <ul>
           <li><a href="#introduction" class="nav-link">Introduction</a></li>
           <li>
