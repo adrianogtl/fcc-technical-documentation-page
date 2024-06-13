@@ -38,7 +38,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 <p align="right"><a href="#readme-top">Back to top :arrow_up: </a></p>
 
-[GIF_PATH]: assets/github/gif.gif
+[GIF_PATH]: assets/github/preview.gif
 [GOOGLE_URL]: https://fonts.google.com/
 [JS_ICON_URL]: https://icons8.com/icon/108784/javascript
 [ICONS8_URL]: https://icons8.com
